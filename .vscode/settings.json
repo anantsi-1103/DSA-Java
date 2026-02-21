@@ -1,7 +1,8 @@
 {
     "java.project.sourcePaths": [
+        "3. ArrayQue",
         "2. Sorting",
         "1. Searching",
-        "3. ArrayQue"
+        "4. Recursion"
     ]
 }
