@@ -1,8 +1,9 @@
 {
     "java.project.sourcePaths": [
+        "4. Recursion",
         "3. ArrayQue",
         "2. Sorting",
         "1. Searching",
-        "4. Recursion"
+        "5. Divide&Conquror"
     ]
 }
