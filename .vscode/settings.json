@@ -1,10 +1,11 @@
 {
     "java.project.sourcePaths": [
+        "6. Backtracking",
         "5. Divide&Conquror",
         "4. Recursion",
         "3. ArrayQue",
         "2. Sorting",
         "1. Searching",
-        "6. Backtracking"
+        "7. ArrayList"
     ]
 }
