@@ -49,6 +49,37 @@ class BinaryTree {
         System.out.print(root.data + " ");
     }
 
+    int height(Node root) {
+        if (root == null) {
+            return 0;
+        }
+
+        int lh = height(root.left);
+        int rh = height(root.right);
+        return Math.max(lh, rh) + 1;
+    }
+
+    int count(Node root) {
+        if (root == null) {
+            return 0;
+        }
+
+        int lc = count(root.left);
+        int rc = count(root.right);
+        return lc + rc + 1;
+    }
+
+    int Sum_node(Node root) {
+        if (root == null) {
+            return 0;
+        }
+
+        int leftSum = Sum_node(root.left);
+        int rightSum = Sum_node(root.right);
+        return leftSum + rightSum + root.data;
+
+    }
+
     public static void main(String[] args) {
 
         BinaryTree t1 = new BinaryTree();
