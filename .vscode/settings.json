@@ -7,11 +7,12 @@
         "4. Recursion",
         "3. ArrayQue",
         "2. Sorting",
+        "13. Hashing",
         "12. Graph",
         "11. Tree",
         "10. Queue",
         "1. Searching",
-        "13. Hashing"
+        "15. Trie"
     ],
     "java.debug.settings.onBuildFailureProceed": true
 }
