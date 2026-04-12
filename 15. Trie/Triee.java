@@ -26,7 +26,7 @@ public class Triee {
 
         Node curr = root;
 
-        for (int i = 0; i < word.length(); i++) {
+        for (int i = 0; i < word.length(); i++) { // [l] [i] ke
 
             int idx = word.charAt(i) - 'a';
 
@@ -71,19 +71,61 @@ public class Triee {
         return true;
     }
 
+    public static boolean WordBreak(String key) {
+        if (key.length() == 0) {
+            return true;
+        }
+
+        for (int i = 1; i <= key.length(); i++) {
+            String firstPart = key.substring(0, i);
+            String secPart = key.substring(i);
+
+            if (search(firstPart) && WordBreak(secPart)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static boolean startWith(String prefix) {
+        Node curr = root;
+
+        for (int i = 0; i < prefix.length(); i++) {
+            int idx = prefix.charAt(i) - 'a';
+
+            if (curr.children[idx] == null) {
+                return false;
+            }
+
+            curr = curr.children[idx];
+
+        }
+        return true;
+    }
+
     // Main Method
     public static void main(String[] args) {
 
-        String word[] = { "the", "a", "there", "their", "any" };
+        // String word[] = { "the", "a", "there", "their", "any" };
 
-        for (int i = 0; i < word.length; i++) {
+        // for (int i = 0; i < word.length; i++) {
 
-            insert(word[i]);
+        // insert(word[i]);
+        // }
+
+        // System.out.println(search("their")); // true
+        // System.out.println(search("thore")); // false
+        // System.out.println(search("any")); // true
+        // System.out.println(search("an")); // false
+
+        // String words[] = { "i", "like", "sam", "samsung", "mobile" };
+        String words[] = {"apple" ,"app", "mango" , "man"};
+        String key = "moon";
+
+        for (int i = 0; i < words.length; i++) {
+            insert(words[i]);
         }
 
-        System.out.println(search("their")); // true
-        System.out.println(search("thore")); // false
-        System.out.println(search("any")); // true
-        System.out.println(search("an")); // false
+        System.out.println(startWith(key));
     }
 }
